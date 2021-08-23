@@ -11,7 +11,7 @@ import PokemonDetails from './pages/pokemon/PokemonDetails';
 const PublicRoute = ({component: Component, ...rest}) => {
     return (
         <Route { ...rest } render={ matchProps => (
-            <DefaultLayout>
+            <DefaultLayout { ...matchProps }>
                 <Component { ...matchProps } />
             </DefaultLayout>
         ) }/>
